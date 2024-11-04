@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #496da8, #cc1580);
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    opacity: 0.2;
+    transition: opacity 0.3s;
+    border-radius: 20px;
+  }
+  
+  .icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+  }
+  
+  .icon:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transform: scale(2);
+  }
+  
+  .card {
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card:hover{
+    transform: rotate(0.02turn);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .dislike-icon {
+    position: absolute;
+    left: -80px;
+    top: 50%;
+    /* transform: translateY(-50%); */
+  }
+  
+  .like-icon {
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    /* transform: translateY(-50%); */
+  }
+  
