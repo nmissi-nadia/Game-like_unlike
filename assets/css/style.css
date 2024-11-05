@@ -1,81 +1,103 @@
+/* Reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #496da8, #cc1580);
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-  }
-  
-  .icon {
-    width: 60px;
-    height: 60px;
-    opacity: 0.2;
-    transition: opacity 0.3s;
-    border-radius: 20px;
-  }
-  
-  .icon img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-  }
-  
-  .icon:hover {
-    opacity: 0.6;
-    cursor: pointer;
-    transform: scale(2);
-  }
-  
-  .card {
-    width: 350px;
-    height: 450px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .card:hover{
-    transform: rotate(0.02turn);
-  }
-  
-  .card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .dislike-icon {
-    position: absolute;
-    left: -80px;
-    top: 50%;
-    /* transform: translateY(-50%); */
-  }
-  
-  .like-icon {
-    position: absolute;
-    right: -80px;
-    top: 50%;
-    /* transform: translateY(-50%); */
-  }
-  
+/* Style du corps */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  background: url(../imgs/dressing3.jpg);
+}
+
+/* Conteneur principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Style de la carte */
+.card {
+  width: 300px;
+  height: 400px;
+  border-radius: 8px;
+  background-color: #e9ecef;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nom du joueur */
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+/* Style des icônes de boutons */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Affichage des images aimées */
+.liked-images {
+  width: 300px;
+  margin-top: 20px;
+}
+
+.liked-images h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-grid-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur final */
+.final-message {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

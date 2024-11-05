@@ -1,27 +1,36 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <meta name="description" content="Swipe Jeux Vidéo">
   <meta name="keywords" content="like,dislike,game,image">
   <title>Swipe Jeux Vidéo</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
 
+  <!-- Conteneur principal de l'image et des informations -->
   <div class="container">
-    <div class="icon dislike-icon" onclick="handleSwipe('dislike')">
-      <img src="../assets/imgs/dislike-icon.png" alt="Dislike">
-    </div>
+    <div id="continer_img" class="card"></div>
+    <div id="game" class="name">START</div>
 
-    <div class="card" id="card">
-      <img src="../assets/imgs/game_image.jpg" alt="Image du jeu" class="card-image">
+    <div class="buttons">
+      <img id="dislike" src="../assets/imgs/dislike-icon.png" alt="Dislike" class="icon">
+      <img id="like" src="../assets/imgs/like-icon.png" alt="Like" class="icon">
     </div>
+  </div>
 
-    <div class="icon like-icon" onclick="handleSwipe('like')">
-      <img src="../assets/imgs/like-icon.png" alt="Like">
-    </div>
+
+  <div id="total" class="liked-images">
+    <h3>Liked Images</h3>
+    <div id="image-grid" class="image-grid"></div>
+  </div>
+
+  
+  <div id="continer-total" class="final-message">
+    <h2>Merci d'avoir terminé le swipe !</h2>
   </div>
 
   <script src="../assets/js/script.js"></script>
